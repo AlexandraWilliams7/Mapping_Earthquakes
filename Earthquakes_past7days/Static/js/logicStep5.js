@@ -114,7 +114,7 @@ d3.json(earthquake).then(function(data) {
     }).addTo(earthquakes);
 
   let legend = L.control({
-    position: 'bottomright'
+    position: "bottomright"
   });
   
   legend.onAdd = function () {
@@ -133,9 +133,10 @@ d3.json(earthquake).then(function(data) {
     for (var i = 0; i < magnitudes.length; i++) {
       console.log(colors[i]);
       div.innerHTML +=
-        "<i style='background: " + colors[i] + "'></i> " +
+        '<i style="background: ' + colors[i] + ' "></i> ' +
         magnitudes[i] + (magnitudes[i + 1] ? "&ndash;" + magnitudes[i + 1] + "<br>" : "+");
       }
+
       return div;
     };
 
